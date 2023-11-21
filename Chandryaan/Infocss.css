@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import 'variables.css';
+@import 'utilities.css';
+
+body{
+   line-height: 1.5;
+   font-family:'Poppins', sans-serif;
+   background: #bbbbbb;
+}
+.brand img{
+    width: 180px
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+}
+header nav{
+    display: grid;
+    padding: 20px 40px 20px 100px;
+    border-bottom: 1px solid #000000;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)), url(Rocket-Images/earth.jpg);
+    background-size: cover;
+    background-position: center;
+} 
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    width: 180px;
+    height: auto; /* This allows the logo's height to adjust proportionally to its width */
+    cursor: pointer;
+    vertical-align: middle; /* Adjust the vertical alignment */
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position:relative;
+    
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #a9cac6;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.navbar ul li:hover::after{
+    width: 100%;
+}
+.cta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh -80px);
+}
+.cta h1{
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: rgb(209, 190, 190);
+}
+.cta>div{
+    flex: 1;
+}
+.cta.left-section{
+    padding: 0 60 0 40px;
+}
+.cta .right-section img {
+    height: 70vh;
+    transform: rotate(20deg);
+    animation: moveInSpace 12s ease-in-out infinite alternate;
+}
+@keyframes moveInSpace {
+    50% {
+       transform: translateY(100px) rotate(-30deg) scale(0.8); 
+    }
+}
+section.strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #bbbbbb;
+    padding: 50px 0;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    margin-left: -59rem;
+}
+section.strip h2{
+    font-size: 70px;
+    font-weight: 90px;
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+    position: relative;
+    text-transform: uppercase;
+    margin-bottom: -3rem;
+}
+section.strip h2::before{
+    content: "MOONSHOT";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+    color: #000000;
+    border-right: 0px solid rgb(31, 56, 249);
+    transition: 400ms ease-out;
+}
+section.strip h2:hover::before{
+    width: 100%;
+    filter: drop-shadow(0 0 1px black)
+}
+section.rocket {
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    grid-gap: 80px;
+    padding: 100px 0;
+}
+
+section.rocket .rocket-body {
+    display: flex;
+    flex-direction: column;
+
+}
+
+section.rocket .rocket-body span {
+    font-size: 0;
+    position: relative;
+    margin-left: -230px;
+    padding-right: 200px;
+}
+
+section.rocket .rocket-body span img {
+    width: 320%;
+}
+
+section.rocket .block {
+    width: 70%;
+}
+
+section.rocket .block h1 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+section.rocket .block .with-underline {
+    position: relative;
+    margin-bottom: 38px;
+}
+
+section.rocket .block .with-underline:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    display: block;
+    width: 38%;
+    height: 2px;
+    background: var(--pure);
+}
+
+section.rocket .block h1.with-underline:before {
+    width: 20%;
+}
+
+section.rocket p {
+    line-height: 1.6;
+}
+
+section.rocket .block h2 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+section.rocket .block.payload {
+    padding-top: 130px;
+}
+
+section.rocket .block.payload h2 {
+    padding-left: 80px;
+}
+
+section.rocket .block.dragon {
+    padding-top: 120px;
+}
+
+section.rocket .block button {
+    margin-top: 30px;
+}
+
+section.rocket .block.composite {
+    padding-top: 60px;
+}
+section.rocket .block.first-stage {
+    padding-top: 60px;
+}
+
+section.rocket .block.capacity {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+}
+
+section.rocket .block.capacity > div:first-child {
+    margin-right: 40px;
+}
+
+section.rocket .block.capacity h4 {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+section.rocket .block.capacity h6 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+section.rocket .block.capacity h6 small {
+    font-size: 12px;
+}
+
+section.rocket .block.second-stage {
+    padding-top: 60px;
+}
+
+section.rocket .right-block .block.capacity {
+    padding-top: 120px;
+}
+
+section.rocket .right-block .block.capacity.single {
+    padding-top: 40px;
+}
+
+section.rocket .right-block .block.engines {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+section.rocket .right-block .block.engines img {
+    width: 180px;
+}
+
+section.rocket .right-block .block.marine {
+    padding-top: 100px;
+    width: 70%;
+}
+
+section.rocket .right-block .block.marine h2 {
+    font-size: 14px;
+    padding-left: 100px;
+    margin-bottom: 26px;
+}
+
+section.rocket .right-block .floating-graphics {
+    float: right;
+    top: 60px;
+    margin-right: -80px;
+    size: 10px;
+}
+
+*.foot{
+    margin: 110;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1170px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.uuu{
+    list-style: none;
+}
+.footer{
+    background-color: #24262b;
+    padding: 50px 0;
+}
+.footer-col{
+    width:25% ;
+    padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #230f16;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color:#ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all ease 0.3s;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 10px;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+.last-line{
+    position: relative;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 150;
+}
