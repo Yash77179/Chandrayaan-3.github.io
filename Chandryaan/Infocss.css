@@ -282,7 +282,7 @@ section.rocket .right-block .floating-graphics {
     size: 10px;
 }
 
-*.foot{
+.foot{
     margin: 110;
     padding: 0;
     box-sizing: border-box;

@@ -89,7 +89,7 @@ nav ul li:hover::after{
     bottom: 0;
     z-index: -1;
 }
-*.foot{
+.foot{
     margin: 110;
     padding: 0;
     box-sizing: border-box;

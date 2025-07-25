@@ -115,7 +115,7 @@ button:hover span{
 button:hover span{
     border: none;
 }
-*.foot{
+.foot{
     margin: 110;
     padding: 0;
     box-sizing: border-box;

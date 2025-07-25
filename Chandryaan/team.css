@@ -165,7 +165,7 @@ section::after{
    text-transform: initial;
    text-align: center;
 }
-*.foot{
+.foot{
    margin: 110;
    padding: 0;
    box-sizing: border-box;
